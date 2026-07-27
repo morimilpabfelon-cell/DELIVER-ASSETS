@@ -21,16 +21,37 @@ Reconstrucción visual de la web después de revisar nuevamente el video de refe
 ## Ejecutar
 
 ```powershell
-cd "$HOME\Downloads\deliver-assets-v1.3"
+cd "$HOME\DELIVER-ASSETS"
 npm config set registry "https://registry.npmjs.org/"
-npm ci
-npm run dev
+npm.cmd ci
+npm.cmd run dev -- --open
 ```
 
 ## Compilar
 
 ```powershell
-npm run build
+npm.cmd run build
 ```
 
 Todo continúa siendo una simulación local sin backend, pagos, GPS ni autenticación real.
+## Verificación local
+
+Instalar las dependencias:
+
+    npm.cmd ci
+
+Ejecutar todas las pruebas y comprobaciones:
+
+    npm.cmd run check
+
+Iniciar el servidor local:
+
+    npm.cmd run dev -- --open
+
+La aplicación se ejecuta normalmente en:
+
+    http://localhost:5173
+
+Durante esta fase, DELIVER ASSETS utiliza Vite localmente y no utiliza GitHub Pages.
+
+La estructura técnica y las reglas de modificación están documentadas en [ARCHITECTURE.md](ARCHITECTURE.md).
